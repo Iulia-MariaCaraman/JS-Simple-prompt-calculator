@@ -12,7 +12,7 @@ The application takes two numbers and an arithmetic operator from the user seque
 - Implements error handling for invalid operations and division by zero.
 
 ## Technologies Used
-- JavaScript (ES6)
+- JavaScript
 - HTML5
 
 ## How to Run
