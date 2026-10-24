@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator Prompt in JavaScript</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 100px;
+            background-color: #f7f9fc;
+        }
+
+        button {
+            padding: 12px 24px;
+            font-size: 16px;
+            cursor: pointer;
+            border: 1px solid #0056b3;
+            background-color: #007bff;
+            color: white;
+            border-radius: 6px;
+        }
+
+            button:hover {
+                background-color: #0056b3;
+            }
+    </style>
+</head>
+<body>
+
+    <h1>Calculator Simplu Prompt</h1>
+    <p>Apasa pe buton pentru a porni calculul direct in browser:</p>
+    <button onclick="ruleazaCalculator()">Porneste Calculatorul</button>
+
+    <script>
+        function ruleazaCalculator() {
+        let primulNumar = Number(prompt("Introdu primul numar:"));
+        let alDoileaNumar = Number(prompt("Introdu al doilea numar:"));
+        let operatie = prompt("Alege operatia (+, -, * sau /):");
+        let rezultat;
+
+        if (!Number.isNaN(primulNumar) && !Number.isNaN(alDoileaNumar)) {
+        switch (operatie) {
+        case "+": rezultat = primulNumar + alDoileaNumar; break;
+        case "-": rezultat = primulNumar - alDoileaNumar; break;
+        case "*": rezultat = primulNumar * alDoileaNumar; break;
+        case "/":
+        rezultat = (alDoileaNumar === 0) ? "Eroare: Impartire la 0" : (primulNumar / alDoileaNumar);
+        break;
+        default: rezultat = "Eroare: Operatie invalida";
+        }
+        } else {
+        rezultat = "Eroare: Nu ai introdus numere valide";
+        }
+
+        alert("Rezultat: " + rezultat);
+        }
+    </script>
+
+</body>
+</html>
